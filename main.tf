@@ -8,6 +8,6 @@ terraform {
 }
 
 provider "aws" {
-  # Configuration options
-  region = "us-east-1" #Norte da Virginia
+  region = "us-east-1" # região da instância
+  profile = "terraform-user-test22" # nome colocado no profile após o aws configure, access key id e secret access key
 }

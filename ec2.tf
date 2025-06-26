@@ -1,11 +1,12 @@
 resource "aws_instance" "web-server-2" {
-  ami                    = "ami-0a0e5d9c7acc336f1"
+  ami                    = "ami-020cba7c55df1f615"  #modelo ami da máquina
   instance_type          = "t2.micro"
   key_name               = "SecondKeys" #Adicione sua Key Pairs da AWS aqui!
-  vpc_security_group_ids = [aws_security_group.bt-avantiSG.id]
   user_data              = file("script.sh")
 
+  security_groups = [aws_security_group.allow_web.name]
+
   tags = {
-    Name = "web-server-2"
+    Name = "Quinta tentativa"
   }
 }

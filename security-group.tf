@@ -1,7 +1,7 @@
 #Configuração do security group para acesso ssh, http e https
-resource "aws_security_group" "bt-avantiSG" {
-  name        = "bt-avantiSG"
-  description = "Allow incoming HTTP, HTTPS e SSH connections."
+resource "aws_security_group" "allow_web" {
+  name        = "allow_web_traffic3"
+  description = "Allow Web inbound traffic3"
 
   #Inbound
   ingress {
@@ -37,6 +37,6 @@ resource "aws_security_group" "bt-avantiSG" {
   }
 
   tags = {
-    Name = "bt-avantiSG"
+    Name = "5h attempt security group"
   }
 }
